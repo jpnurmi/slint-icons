@@ -1,0 +1,25 @@
+[package]
+name = "slint-icons"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "generator"
+path = "tools/generator.rs"
+
+[dependencies]
+itertools = "0.11.0"
+
+[workspace]
+resolver = "2"
+members = ["example"]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["J-P Nurmi <jpnurmi@gmail.com>"]
+edition = "2021"
+license = "Apache-2.0"
+
+[workspace.dependencies]
+slint = { git = "https://github.com/slint-ui/slint" }
+slint-build = { git = "https://github.com/slint-ui/slint" }

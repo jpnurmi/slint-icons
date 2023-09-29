@@ -1,0 +1,15 @@
+import { Icon, IconData, MaterialIcons } from "@slint-icons/material.slint";
+import { ComboBox, ListView, StyleMetrics } from "std-widgets.slint";
+
+export component MainWindow inherits Window {
+    preferred-width: 800px;
+    preferred-height: 600px;
+
+    HorizontalLayout {
+        spacing: 24px;
+        for icon in [MaterialIcons.abc, MaterialIcons.ac-unit, MaterialIcons.home, MaterialIcons.settings]: Icon {
+            icon: icon;
+            size: 96px;
+        }
+    }
+}

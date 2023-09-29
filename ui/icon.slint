@@ -1,0 +1,24 @@
+import { StyleMetrics } from "std-widgets.slint";
+
+export struct IconData {
+    code-point: string,
+    font-family: string,
+}
+
+export global IconTheme {
+    in-out property<length> size: 24px;
+    in-out property<color> color: StyleMetrics.default-text-color;
+}
+
+export component Icon {
+    in property<IconData> icon;
+    in property<length> size: IconTheme.size;
+    in property<color> color: IconTheme.color;
+
+    Text {
+        text: root.icon.code-point;
+        font-family: root.icon.font-family;
+        font-size: root.size;
+        color: root.color;
+    }
+}
